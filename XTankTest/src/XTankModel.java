@@ -43,11 +43,12 @@ public class XTankModel {
 			for (Tank tank : tanks) {
 				if (shot.getShooter().equals(tank)) continue;
 				if (shot.getXpos() == tank.getXpos() && shot.getXpos() == tank.getXpos()) {
-					if (shot.getYpos() == tank.getYpos() && shot.getYpos() == tank.getYpos())
-					System.out.println("SHOT REGISTERED!!!!!!");
-					tanks.remove(tank);
-					shots.remove(shot);
-					return;
+					if (shot.getYpos() == tank.getYpos() && shot.getYpos() == tank.getYpos()) {
+						System.out.println("SHOT REGISTERED!!!!!!");
+						tanks.remove(tank);
+						shots.remove(shot);
+						return;
+					}
 				}
 			}
 		}
