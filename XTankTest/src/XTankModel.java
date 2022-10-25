@@ -34,7 +34,7 @@ public class XTankModel {
 				return;
 			}
 		}
-		System.out.println(shots);
+		//System.out.println(shots);
 		ui.updateUI();
 	}
 	
