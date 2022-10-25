@@ -38,9 +38,9 @@ public class Tank {
 		} else if (angle == 1) {
 			ret += "<<";
 		} else if (angle == 2) {
-			ret += "/\\";
+			ret += " /\\";
 		} else if (angle == 3) {
-			ret += "\\/";
+			ret += " \\/";
 		}
 		ret += id;
 		return ret;

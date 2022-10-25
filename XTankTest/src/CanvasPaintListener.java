@@ -47,18 +47,19 @@ public class CanvasPaintListener implements PaintListener
 	 * @param event, PaintEvent object representing an event from the system
 	 */
 	public void paintControl(PaintEvent e) 
-	{
-		Rectangle rect = shell.getClientArea();
-		e.gc.setBackground(display.getSystemColor(SWT.COLOR_WHITE)); 
-        e.gc.fillRectangle(rect.x, rect.y, rect.width, rect.height);
-        e.gc.setForeground(display.getSystemColor(SWT.COLOR_BLUE));
-        
+	{   e.gc.fillRectangle(shell.getBounds());
         for (Tank curr : currentModel.getTanks()) {
-        	 e.gc.drawText(curr.toString(), curr.getXpos(), curr.getYpos());
+    		e.gc.setBackground(shell.getDisplay().getSystemColor(SWT.COLOR_DARK_GREEN));
+        	e.gc.fillRectangle(curr.getXpos(), curr.getYpos(), 50, 100);
+    		e.gc.setBackground(shell.getDisplay().getSystemColor(SWT.COLOR_BLACK));
+    		e.gc.fillOval(curr.getXpos(), curr.getYpos()+25, 50, 50);
+    		e.gc.setLineWidth(4);
+    		e.gc.setBackground(shell.getDisplay().getSystemColor(SWT.COLOR_WHITE));
+    		e.gc.drawText(curr.toString(), curr.getXpos()+7, curr.getYpos()+40);
         }
         
         for (Bullet curr : currentModel.getShots()) {
-        	e.gc.drawText("*", curr.getXpos(), curr.getYpos());
+        	e.gc.drawOval(curr.getXpos()+10, curr.getYpos()+43, 10, 10);
         }
         	
 	}
