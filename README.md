@@ -10,3 +10,4 @@ TODO:
 - Add more angles
 - Add different bullet types (slug, ricochet, explosive AOE damage, etc...)
 - Make it a over the network game so more players are supported
+- ...
