@@ -32,7 +32,7 @@ public class CanvasPaintListener implements PaintListener
 	 * on the shell and display. Also received the tank model
 	 * 
 	 * @param sh, Shell object representing the open GUI shell
-	 * @param disp, Display object represenitng the current GUI display
+	 * @param disp, Display object representing the current GUI display
 	 * @param md, XTankModel object
 	 */
     public CanvasPaintListener(Shell sh, Display disp, XTankModel md)
