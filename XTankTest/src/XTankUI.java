@@ -64,7 +64,7 @@ public class XTankUI
 		Tank p1 = new Tank(0, 450, 0, "P1");
 		tankControl.addTank(p1);
 		
-		Tank p2 = new Tank(900, 450, 0, "P2");
+		Tank p2 = new Tank(500, 450, 0, "P2");
 		tankControl.addTank(p2);
 		
         // This key Listener is used to get a character from the keyboard

@@ -28,9 +28,13 @@ public class XTankModel {
 	
 	public void moveBullets() {
 		for (Bullet shot : shots) {
-			shot.move();
+			Boolean remove = shot.move();
+			if (remove) {
+				shots.remove(shot);
+				return;
+			}
 		}
-		//System.out.println(shots);
+		System.out.println(shots);
 		ui.updateUI();
 	}
 	
